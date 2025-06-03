@@ -7,3 +7,8 @@ Route::get('/', function () {
 });
 
 
+//fardin
+Route::get('/dashboard', function () {
+    return view('pages.dashboard');
+});
+//fardin
