@@ -9,7 +9,7 @@
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>@yield('title')</title>
 </head>
-<body>
+<body class="p-3">
     <div class="content">
         @yield('content')
     </div>
