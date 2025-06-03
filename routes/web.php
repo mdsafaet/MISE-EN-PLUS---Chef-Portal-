@@ -7,6 +7,14 @@ Route::get('/', function () {
 });
 
 
+Route::get('/add-staff', function () {
+    return view('add_staff');
+});
+Route::get('/admin/home', function () {
+    return view('admin_home');
+});
+
+
 
 Route::get('/mykitchen', function () {
     return view('mykitchen');
@@ -21,3 +29,4 @@ Route::get('/dashboard', function () {
     return view('pages.dashboard');
 });
 //fardin
+
