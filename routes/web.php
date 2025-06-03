@@ -7,3 +7,14 @@ Route::get('/', function () {
 });
 
 
+Route::get('/mykitchen', function () {
+    return view('mykitchen');
+});
+
+Route::get('/pantrylist', function () {
+    return view('pantrylist');
+});
+
+
+
+
