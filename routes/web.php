@@ -7,6 +7,14 @@ Route::get('/', function () {
 });
 
 
+Route::get('/add-staff', function () {
+    return view('add_staff');
+});
+Route::get('/admin/home', function () {
+    return view('admin_home');
+});
+
+
 
 Route::get('/mykitchen', function () {
     return view('mykitchen');
@@ -16,7 +24,6 @@ Route::get('/pantrylist', function () {
     return view('pantrylist');
 });
 
-<<<<<<< HEAD
 
 
 
@@ -29,4 +36,6 @@ Route::get('/dashboard', function () {
     return view('pages.dashboard');
 });
 //fardin
->>>>>>> 811cb7d6754d06afe4387a787e104491450b16a5
+
+=======
+
