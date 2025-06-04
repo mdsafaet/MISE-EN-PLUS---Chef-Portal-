@@ -48,7 +48,7 @@
       <!-- Close button -->
       <button 
         @click="open = false" 
-        class="mt-6 bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded"
+        class="mt-6 bg-gray-300 hover:bg-gray-400 text-gray-800 px-3 py-2 rounded"
       >
         Close
       </button>
@@ -117,180 +117,81 @@
 </div>
 
 
- 
 
-<div class="max-w-7xl mx-auto space-y-8 px-4 sm:px-6 lg:px-8 mt">
+<div class=" mx-auto mt-10 px-4" x-data="{ showModal: false }">
 
-  {{-- <!-- Product Card -->
-  <div class="bg-white rounded-lg shadow border p-4 flex justify-between md:flex-row md:items-start gap-6">
-    
+  <!-- Product Card -->
+  <div class="flex items-center justify-between bg-white p-4 rounded-lg shadow-lg border border-gray-200">
     <!-- Image -->
-    <img
-      src="https://res.cloudinary.com/dnawewlz7/image/upload/v1/Restaurant%20Tech%20Files/ordersplus/uqxjazvsq0rgwrwnsvd3"
-      alt="Grilled Salmon"
-      class="w-36 h-48 rounded object-cover flex-shrink-0"
-    />
-<div class="">
-    <!-- Product Details -->
-    <div class="flex flex-col justify-between w-full md:w-40 mb-1.5">
-      <div class="font-semibold text-md">Grilled Salmon</div>
-      <div class="text-sm text-gray-600">500 g /</div>
-      <div class="text-blue-600 font-semibold">$ 32.00</div>
+    <img src="https://res.cloudinary.com/dnawewlz7/image/upload/v1/Restaurant%20Tech%20Files/ordersplus/uqxjazvsq0rgwrwnsvd3"
+         alt="Carrots"
+         class="w-16 h-16 rounded-md object-cover" />
+
+    <!-- Product Info -->
+    <div class="flex-1 px-3">
+      <p class="font-semibold text-gray-800">Beef Tenderloin </p>
+      <p class="text-sm text-gray-500">5kg </p>
     </div>
 
-    <!-- Supplier Info -->
-    <div class="flex flex-col justify-between text-sm w-full md:w-40 mt-1.5">
-      <div class="font-semibold">Seafood Supplier Ltd.</div>
-      <div>SKU: SAL-54321</div>
-      <div class="text-green-600 font-medium">In Stock</div>
-      <div class="text-gray-500">Next Del: 30/05/2023</div>
+    <!-- Price Info -->
+    <div class="flex-1 px-3">
+      <p class="font-semibold text-gray-800">Price</p>
+      <p class="text-sm text-red-500">$55.8</p>
     </div>
 
-
-    </div>
-    
-  </div>
-<!-- Container wrapping Quantity Controls + Notes and Actions -->
-<div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:items-start w-full">
-
-  <!-- Quantity Controls -->
-  <div class="flex flex-col items-center gap-2 w-full md:w-auto">
-    <div class="font-semibold">QTY Required</div>
-    <div class="flex items-center space-x-2">
-      <button
-        class="bg-orange-500 text-white px-3 py-1 rounded font-bold"
-        aria-label="Increase quantity"
-      >
-        +
+    <!-- Actions -->
+    <div class="flex items-center gap-3">
+      <!-- Info Button -->
+      <button @click="showModal = true" class="border-2 border-blue-500 text-blue-500 rounded p-1 hover:bg-orange-100">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+       class="h-5 w-5 transition duration-200 group-hover:scale-110" 
+       fill="none" 
+       viewBox="0 0 24 24" 
+       stroke="currentColor" 
+       stroke-width="2">
+    <path stroke-linecap="round" 
+          stroke-linejoin="round" 
+          d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+  </svg>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
       </button>
-      <span class="font-semibold text-lg">3</span>
-      <button
-        class="bg-gray-600 text-white px-3 py-1 rounded font-bold"
-        aria-label="Decrease quantity"
-      >
-        -
+
+      <!-- Delete Button -->
+      <button class="border-2 border-orange-500 text-orange-500 rounded p-1 hover:bg-orange-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
       </button>
     </div>
-    <button
-      class="bg-orange-500 text-white text-sm px-4 py-1 rounded w-full md:w-auto"
-      type="button"
-    >
-      Price: $ 96.00 gst incl
-    </button>
   </div>
 
-  <!-- Notes -->
-  <div>
-    <textarea
-      class="border-2 border-orange-300 rounded px-2 py-1 resize-none w-full h-full max-w-lg"
-      rows="6"
-      placeholder="Add notes here..."
-    ></textarea>
-  </div>
-
-  <!-- Actions -->
-  <div class="flex flex-col gap-2 min-w-[120px] w-full md:w-auto">
-    <button
-      class="bg-green-500 text-white px-4 py-1 rounded text-sm w-full md:w-auto"
-    >
-      💾 Save Notes
-    </button>
-    <button
-      class="bg-orange-500 text-white px-4 py-1 rounded text-sm w-full md:w-auto"
-    >
-      🛒 Add to Order
-    </button>
-    <button
-      class="bg-red-500 text-white px-4 py-1 rounded text-sm w-full md:w-auto"
-    >
-      🗑 Remove
-    </button>
-  </div>
-
-</div> --}}
-
-<!-- Repeat Product Card for more items -->
-<div class="max-w-4xl mx-auto p-4 bg-white border border-gray-200 rounded-md shadow-sm flex flex-col md:flex-row items-center gap-4 md:gap-6">
-
-  <!-- Image -->
-  <div class="flex-shrink-0 w-24 h-24 md:w-32 md:h-32">
-    <img
-      src="https://res.cloudinary.com/dnawewlz7/image/upload/v1/Restaurant%20Tech%20Files/ordersplus/uqxjazvsq0rgwrwnsvd3"
-      alt="Beef Tenderloin"
-      class="w-full h-full object-cover rounded-md"
-    />
-  </div>
-
-  <!-- Product Details -->
-  <div class="flex-1 min-w-0">
-    <p class="font-semibold text-gray-900 truncate">Beef Tenderloin</p>
-    <p class="text-gray-700 text-sm">1 kg /</p>
-    <a href="#" class="text-blue-600 font-medium hover:underline mt-1 block">$ 54.00</a>
-  </div>
-
-  <!-- Supplier & Stock Info -->
-  <div class="flex-1 min-w-0">
-    <p class="font-semibold text-gray-900 truncate">ABC Meat & Poultry</p>
+  <!-- Modal -->
+  <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" x-show="showModal">
+    <div class="bg-white rounded-lg p-6 relative" @click.away="showModal = false">
+      <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-900" @click="showModal = false">
+        &times;
+      </button>
+      <h2 class="text-lg font-bold text-gray-800 mb-2">Beef Tenderloin</h2>
+      <img src="https://res.cloudinary.com/dnawewlz7/image/upload/v1/Restaurant%20Tech%20Files/ordersplus/uqxjazvsq0rgwrwnsvd3"
+           alt="Carrots"
+           class="w-full h-48 object-cover rounded mb-4" />
+ <p class="font-semibold text-gray-900 truncate">ABC Meat & Poultry</p>
     <p class="text-gray-600 text-xs">SKU: <span class="font-medium">BTL-12345</span></p>
     <p class="text-green-600 text-sm font-semibold">In Stock</p>
     <p class="text-gray-400 text-xs mt-1">Next Del: <span class="font-medium">26/05/2023</span></p>
-  </div>
 
-  <!-- Quantity Controls -->
-  <div class="flex flex-col items-center gap-2">
-    <p class="font-semibold text-gray-900">QTY Required</p>
-    <div class="flex items-center gap-1">
-      <button class="bg-orange-600 hover:bg-orange-700 text-white px-2 py-1 rounded-md" aria-label="Increase quantity">+</button>
-      <input type="number" value="1" min="1" class="w-12 text-center border border-gray-300 rounded-md" />
-      <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-2 py-1 rounded-md" aria-label="Decrease quantity">−</button>
-    </div>
-    <div class="mt-1 text-xs text-white bg-orange-600 rounded-md px-3 py-1 font-semibold">
-      Price : $ 54.00 gst incl
+      <p class="text-sm text-gray-700 mb-2">5kg</p>
+      <label class="block text-sm text-gray-600 mb-1">Quantity</label>
+      <input type="number" value="1" min="1" class="w-24 border border-gray-300 rounded px-2 py-1 mb-4" />
+      <textarea class="w-full border border-gray-300 rounded p-2 resize-none mb-4" rows="3" placeholder="Notes...">Hello</textarea>
+      <div class="flex justify-end gap-2">
+        <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">Save Notes</button>
+        <button class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded">Add to Order</button>
+      </div>
     </div>
   </div>
-
-  <!-- Notes and Action Buttons -->
-  <div class="flex flex-col md:flex-row md:items-start gap-3 w-full md:w-auto min-w-[150px]">
-    <textarea
-      placeholder="Notes"
-      class="w-full md:w-48 h-20 border border-gray-300 rounded-md p-2 resize-none focus:outline-none focus:ring-2 focus:ring-orange-500"
-    >Hello</textarea>
-
-    <div class="flex flex-col gap-2">
-      <button
-        class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md flex items-center justify-center gap-1"
-        type="button"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-        </svg>
-        Save Notes
-      </button>
-
-      <button
-        class="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-md flex items-center justify-center gap-1"
-        type="button"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11M3 6h18M3 14h11M3 18h18" />
-        </svg>
-        Add to Order
-      </button>
-
-      <button
-        class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md flex items-center justify-center gap-1"
-        type="button"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-        Remove
-      </button>
-    </div>
-  </div>
-
-
-
+</div>
 
 
   </body>
