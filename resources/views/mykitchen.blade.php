@@ -9,20 +9,11 @@
   </head>
 
   <body class="pb-24 max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
- 
-
-
-      
-    
-
-      
-
-       
+  
     </header>
 
-
       <div class="mt-4 flex flex-wrap justify-between gap-2 items-center">
-        <button class="bg-orange-500 text-white px-2 py-2 rounded-md text-sm">Action</button>
+      <button class="bg-orange-500 text-white px-2 py-2 rounded-md text-sm">Action</button>
        
               <p class=" font-bold text-sm sm:text-base">My Kitchen</p>
  
@@ -178,7 +169,6 @@
     </button>
   </div>
 </div>
-
  </div>
 
    <!-- Assign Staff To Section -->
@@ -252,13 +242,5 @@
   </div>
   
 </div>
-
-
-
-
-
-
-
-
-  </body>
+</body>
 </html>
